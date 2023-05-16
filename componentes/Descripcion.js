@@ -36,9 +36,9 @@ class Descripcion extends React.Component {
                 <React.Fragment>
                     
 
-                    <button class="desplegable " onClick={this.cambiarMostrar} > <i class="fa-brands fa-react"></i> {texto}</button>                                               
+                    <button className="desplegable " onClick={this.cambiarMostrar} > <i class="fa-brands fa-react"></i> {texto}</button>                                               
         
-                    <p class={"d-visible"+clase}>
+                    <p className={"d-visible"+clase}>
                         {this.props.descripcion}
                         
                        

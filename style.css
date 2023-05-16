@@ -10,6 +10,7 @@ body{
     min-width: 335px;
 }
 
+
 :root{
     --primario:#18b1db;
     --primario2:#00C7D8;
@@ -31,6 +32,7 @@ body{
     position: fixed;
     top:0;
     background-color: var(--oscuro2)
+    
 
 }
 
@@ -70,12 +72,6 @@ body{
     z-index: 50;
 }
 
-@media  screen and (max-width:608px) {
-    .navbar nav i{
-        display:none;
-    }
-    
-}
 /*menu desplegable*/
 .hero div.menu{
     display: flex;
@@ -131,10 +127,44 @@ body{
 
 
 
-/**/
+/*  desplegable 2  */
+
+.desplegable-react{
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    margin-top: 10px;
+    background-color:var(--oscuro1);
+    padding: 15px;
+}
+@media screen and (min-width:768px) {
+    
+    .desplegable-react{
+        display: none;
+    }
+    
+}
+.desplegable2{
+    
+    background-color:transparent;
+    color: var(--primario3);
+    
+    margin: 0px 2px 0px 5px;
+    
+    padding: 0px 3px 0px 5px;
+    height: fit-content;
+
+}
+.item-desplegable{
+    color: var(--primario3);
+    background-color: var(--oscuro1);
+    margin: 2px;
+}
 
 
 
+/*-------------------*/
 .navbar a{
     margin-right: 5px;
     font-size: 1.5rem;
@@ -173,7 +203,18 @@ body{
     opacity: 0.5;
 }
 
-
+@media screen and (max-width:767px) {
+    .navbar{
+        display: none;
+    }
+    .navbar div.logo a{
+        display: none;
+    }
+    .navbar a{
+        display: none;
+    }
+    
+}
 /*profile circulo*/
 
 .profile div{
@@ -491,11 +532,11 @@ span.destacado{
 .skills p{
     color: white;
 }
-section.skills{
+/*section.skills{
     background-color: var(--oscuro1);
 
 
-}
+}*/
 .conocimientos {
   display: flex;
   flex-direction: column;
@@ -788,6 +829,106 @@ font-size: 1.2rem;
     border: 2px solid red;
 
 }
+                             /******************portfolio***********/
+.imagen-modal{
+    width: 80%;
+    height: auto;
+}
+
+.miniatura-captura{
+    /*border: solid 5px blue;*/
+    width: 150px;
+    height: 150px;
+    position: relative;    
+    cursor: pointer;
+}
+.miniatura-captura .imagen{
+    height: 150px;
+    width: 150px;
+    display: block;    
+}
+.miniatura-captura .proyecto-desc{
+    /*border: solid 5px blue;*/    
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+    position: absolute;
+}
+.miniatura-captura .proyecto-desc h3{
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.miniatura-captura .proyecto-desc:hover{
+    opacity: 1;
+}
+.miniatura-captura .proyecto-desc:hover h3{
+    margin-bottom: 0px;
+}
+
+.portfolio-modal-body{
+    background-color: var(--oscuro2);
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+}
+.portfolio-modal-tarjeta{
+    width: 50px;
+    height: 50px;
+    background-color: #00DAC5;
+}
+.abrir-desc:hover{
+    color: var(--asento);
+}
+
+@media screen and (min-width:576px) {
+    .miniatura-captura{
+        width: 200px;
+        height: 200px;
+    }
+    .miniatura-captura .imagen{
+        height: 200px;
+        width: 200px;
+    }
+}
+
+.modal-pf-body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 100;
+    cursor: default;
+}
+.modal-pf-body .modal-portfolio{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-portfolio{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:rgb(0,0,0,0.5);
+    transition: all 500ms ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+
 /********** popup estructura********************/
 .budy{
     margin: 0;
@@ -856,9 +997,14 @@ font-size: 1.2rem;
     background: linear-gradient(180deg, rgba(5,74,117,1) 0%, rgba(31,151,223,1) 100%);
     box-shadow: 1px 7px 25px rgba(0,0,0,0.5);
     transition: all 500ms ease;
-    position: absolute;    
-     
+    position: absolute;         
  }
+
+.contenido0 a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
 .contenido0{
     display: flex;
     flex-direction: column;
