@@ -51,14 +51,7 @@ class MenuDesplegable extends React.Component {
     }
 }
 
-var cadenaspace={
-    titulo : 'Space Tursim',
-    descripcion :'Esta pagina de viajes espaciales es una SPA propuesta como challenge de Frontend Mentor.',
-    tecnologias:'tecnologias: React.js, Bootstrap, HTML y CSS ',
-    linkGh:'https://arielsa.github.io/spaceapp/',
-    linkW:'https://arielsa.github.io/spaceapp/',
-    imagen:'./img/pantalla-spacenav.png',
-}
 
 
-ReactDOM.render(<MenuDesplegable descripcion={cadenaspace} />,document.getElementById("menu-desplegable"));
+
+ReactDOM.render(<MenuDesplegable  />,document.getElementById("menu-desplegable"));

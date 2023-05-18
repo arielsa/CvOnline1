@@ -619,7 +619,6 @@ span.destacado{
     
     padding: 0px 3px 0px 5px;
     height: fit-content;
-
 }
 .desplegable:hover{
     color: var(--asento);
@@ -831,7 +830,7 @@ font-size: 1.2rem;
 }
                              /******************portfolio***********/
 .imagen-modal{
-    width: 80%;
+    width: 70%;
     height: auto;
 }
 
@@ -926,6 +925,19 @@ font-size: 1.2rem;
     transition: all 500ms ease;
     opacity: 1;
     visibility: visible;
+}
+.desplegable3{    
+    background-color:transparent;
+    color: white;
+    border: 2px solid var(--asento2);
+    margin: 0px 2px 0px 5px;
+    
+    padding: 0px 3px 0px 5px;
+    height: fit-content;
+}
+.desplegable3:hover{
+    color: var(--asento);
+    border: 2px solid var(--primario);
 }
 
 
